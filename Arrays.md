@@ -611,6 +611,43 @@ int main(){
               printf("\n");
         }
 }
+
+#include<stdio.h>
+int main()
+{
+        int arr[]={1,2,3,4,5,6};
+        int len=sizeof(arr)/sizeof(arr[0]);
+        int arr2[len+1];
+        int ele;
+        int pos;
+        printf("Existing elements\n");
+        for(int i=0;i<len;i++)
+        {
+                printf("%d",arr[i]);
+        }
+        printf("Enter the element to add\n");
+        scanf("%d",&ele);
+        printf("Enter the position starting pos is 0-1-2...\n");
+        scanf("%d",&pos);
+        for(int i=0;i<pos;i++)
+        {
+
+                arr2[i]=arr[i];
+        }
+        arr2[pos]=ele;
+        for(int i=pos;i<len;i++)
+        {
+                arr2[i+1]=arr[i];
+        }
+
+        for(int i=0;i<len+1;i++)
+        {
+                printf("%d",arr2[i]);
+        }
+        return 0;
+}
+
+
 ```
  ## 26.Delete an element at a given position in an array.
  ```c
